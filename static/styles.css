@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background-color: beige;
+}
+#container {
+  display: grid;
+  grid-template-rows: 100px repeat(3, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+}
+
+header {
+  width: 100vw;
+}
+#logo {
+  color: white;
+  cursor: pointer;
+}
+#logo:hover {
+  color: rgb(169, 255, 226);
+  cursor: pointer;
+}
+
+header nav {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 35px;
+  background-color: black;
+}
+header nav ul li {
+  display: inline-block;
+  padding: 0 50px;
+}
+
+header nav ul li a {
+  color: aquamarine;
+}
+
+#contact-us-btn {
+  background-color: aquamarine;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+#contact-us-btn:hover {
+  background-color: rgb(31, 247, 175);
+  cursor: pointer;
+}
+
+input {
+  padding: 5px;
+}
+
+button {
+  padding: 5px;
+}
+
+div {
+  margin: 5px;
+}
+footer {
+  text-align: center;
+  padding: 15px 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li a span {
+  color: rgb(198, 252, 234);
+}
+
+li a span:hover {
+  color: aquamarine;
+  cursor: pointer;
+}
+
+select {
+  padding: 5px;
+}
+
+#select-div {
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  padding: 15px 25px;
+}
+
+#story_template {
+  border-radius: 5px;
+  background-color: rgb(198, 252, 234);
+  outline-color: antiquewhite;
+}
+
+#story_template:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+#generate-story {
+  cursor: pointer;
+}

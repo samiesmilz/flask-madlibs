@@ -1,0 +1,12 @@
+{% extends 'baselet.html' %} {% block title %} Madlibs {% endblock %} {% block
+link %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{url_for('static', filename='story.css')}}"
+/>
+{% endblock %} {% block logo %} MADLIBS {% endblock %} {% block content %}
+<h1>A Madlibs story...</h1>
+<p>{{ story }}</p>
+
+{% endblock %}

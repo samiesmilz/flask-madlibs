@@ -1,0 +1,29 @@
+{% extends 'baselet.html' %} {% block title %} Madlibs {% endblock %} {% block
+logo %} MADLIBS {% endblock %} {% block content %}
+<h1>Madlibs</h1>
+
+<form action="/story">
+  <label for="place">place:</label>
+  <input type="text" name="place" placeholder="enter place" alt="place" />
+  <label for="noun">noun:</label>
+  <input type="text" name="noun" placeholder="enter noun" alt="noun" />
+  <label for="verb">verb:</label>
+  <input type="text" name="verb" placeholder="enter verb" alt="verb" />
+  <label for="adjective">adjective:</label>
+  <input
+    type="text"
+    name="adjective"
+    placeholder="enter adjective"
+    alt="adjective"
+  />
+  <label for="plural_noun">plural noun:</label>
+  <input
+    type="text"
+    name="plural_noun"
+    placeholder="enter plural noun"
+    alt="plural noun"
+  />
+  <button>submit</button>
+</form>
+
+{% endblock %}

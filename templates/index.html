@@ -1,0 +1,19 @@
+{% extends 'baselet.html' %} {% block title %} Madlibs {% endblock %} {% block
+logo %} MADLIBS {% endblock %} {% block content %}
+<h1>Madlibs</h1>
+<p>It's story time...</p>
+<div id="select-div">
+  <form action="/form">
+    <label for="story_template">Select a story template:</label>
+    <select name="story_template" id="story_template">
+      <option value="farmyard">Funny Farmyard Fiasco</option>
+      <option value="pirate">Pirate Plunder</option>
+      <option value="space">Space Oddity</option>
+      <option value="superhero">Superhero Shenanigans</option>
+      <option value="disaster">Dino Disaster</option>
+      <option value="default" selected>Default</option>
+    </select>
+    <button id="generate-story">Generate story</button>
+  </form>
+</div>
+{% endblock %}
