@@ -1,12 +1,45 @@
 from stories import Story
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, flash, jsonify
 app = Flask(__name__, static_folder='static')
+app.config["SECRET_KEY"] = "samie"
 
 
 @app.route("/")
 def home():
     """ Render the form on the homepage """
     return render_template('index.html')
+
+
+# Fake DB set of movies
+movies = {"mageiva", "solo", "home alone"}
+
+
+@app.route("/old")
+def redirect_to_home():
+    flash("We moved - here is our new page.")
+    return redirect("/")
+
+
+@app.route("/movies")
+def show_movies():
+    return render_template("movies.html", movies=movies)
+
+
+@app.route("/movies/new", methods=["POST"])
+def submit_movie():
+    movie = request.form["movie"]
+    if movie in movies:
+        flash("Movie already added.", 'error')
+    else:
+        movies.add(movie)
+        flash("Movie added!")
+    return redirect("/movies")
+
+
+@app.route("/movies/json")
+def return_json():
+
+    return jsonify(list(movies))
 
 
 # Variable to store the template selected

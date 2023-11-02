@@ -1,0 +1,17 @@
+{% extends 'baselet.html' %} {% block title %} Movies {% endblock %} {% block
+logo %} MADLIBS {% endblock %} {% block content %}
+<h1>It's movie time</h1>
+<p>All your favorite movies</p>
+<ul>
+  {% for movie in movies %}
+  <li>{{movie}}</li>
+  {% endfor %}
+</ul>
+
+<form action="/movies/new" method="POST">
+  <label for="movie">Movie title: </label>
+  <input type="text" placeholder="enter a movie " name="movie" />
+  <button>submit</button>
+</form>
+
+{% endblock %}

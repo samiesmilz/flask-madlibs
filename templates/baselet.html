@@ -19,11 +19,24 @@
           <li>
             <a href="/"><span>Welcome to Matlibs | Stories... </span></a>
           </li>
+          <li>
+            <a href="/movies"><span>Movies</span></a>
+          </li>
         </ul>
         <a href="#"><button id="contact-us-btn">Contact us</button></a>
       </nav>
     </header>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    <section class="flash">
+      {% for category, msg in messages %}
+      <p id="flash-messages" class="{{category}}">{{msg}}</p>
+      {% endfor %}
+    </section>
+    {% endif %} {% endwith %}
+
     <div id="container">{% block content %} {% endblock %}</div>
+
     <footer>
       <span>A <i>samie smilz production.</i></span>
     </footer>
